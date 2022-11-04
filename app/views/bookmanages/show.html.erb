@@ -1,0 +1,27 @@
+<p style="color: green"><%= notice %></p>
+
+
+<div class="jumbotron">
+  <h1 class="display-4">
+    
+        <%= @bookmanage.fullname %>
+  </h1>
+  <p class="lead">
+    <%= @bookmanage.student_id %> |
+    <%= @bookmanage.class_name %>  | 
+    <%= @bookmanage.book_id %>  |  
+    <%= @bookmanage.book_name %>  |
+    <%= @bookmanage.author_name %>  |
+    <%= @bookmanage.source_name %>  |
+    <%= @bookmanage.bm_number %>  |
+    <%= @bookmanage.first_day %>  |
+    <%= @bookmanage.last_day %>  |
+    <%= @bookmanage.day_number %>  |
+    <%= @bookmanage.note %>  |
+
+  </p>
+  <%= link_to "Chỉnh sửa", edit_bookmanage_path(@bookmanage), class:"btn btn-warning" %> 
+  <%= link_to "Quay lại", bookmanages_path, class:"btn btn-dark" %>
+
+  <%= button_to "Xóa", @bookmanage, method: :delete , class:"btn btn-danger", style:"margin-top: 20px"%>
+</div>

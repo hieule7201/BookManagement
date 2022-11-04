@@ -1,0 +1,65 @@
+<%= form_with(model: bookmanage) do |form| %>
+  <% if bookmanage.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(bookmanage.errors.count, "error") %> prohibited this bookmanage from being saved:</h2>
+
+      <ul>
+        <% bookmanage.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group" style="margin-bottom: 20px">
+    <%= form.text_field :student_id, class: "form-control", placeholder: "Mã HS" %>
+  </div>
+
+  <div class="field form-group" style="margin-bottom: 20px">
+    <%= form.text_field :fullname,class: "form-control", placeholder: "Họ và tên" %>
+  </div>
+
+  <div class="field form-group" style="margin-bottom: 20px">
+    <%= form.text_field :class_name,class: "form-control", placeholder: "Lớp" %>
+  </div>
+
+  <div class="field form-group" style="margin-bottom: 20px">
+    <%= form.text_field :book_id,class: "form-control", placeholder: "Mã sách" %>
+  </div>
+
+  <div class="field form-group" style="margin-bottom: 20px">
+    <%= form.text_field :book_name,class: "form-control", placeholder: "Tên sách" %>
+  </div>
+
+  <div class="field form-group" style="margin-bottom: 20px">
+    <%= form.text_field :author_name,class: "form-control", placeholder: "Tác giả" %>
+  </div>
+
+  <div class="field form-group" style="margin-bottom: 20px">
+    <%= form.text_field :source_name,class: "form-control", placeholder: "Tủ sách" %>
+  </div>
+
+  <div class="field form-group" style="margin-bottom: 20px">
+    <%= form.text_field :bm_number,class: "form-control", placeholder: "Số BM" %>
+  </div>
+
+  <div class="field form-group" style="margin-bottom: 20px">
+    <%= form.text_field :first_day,class: "form-control", placeholder: "Ngày mượn" %>
+  </div>
+
+  <div class="field form-group" style="margin-bottom: 20px">
+    <%= form.text_field :last_day,class: "form-control", placeholder: "Ngày trả" %>
+  </div>
+
+  <div class="field form-group" style="margin-bottom: 20px">
+    <%= form.text_field :day_number,class: "form-control", placeholder: "Số ngày" %>
+  </div>
+
+  <div class="field form-group" style="margin-bottom: 20px">  
+  <%= form.text_field :note,class: "form-control", placeholder: "Ghi chú" %>
+  </div>
+
+  <div>
+    <%= form.submit class: "btn btn-secondary"%>
+  </div>
+<% end %>
